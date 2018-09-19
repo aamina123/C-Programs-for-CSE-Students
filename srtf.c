@@ -7,12 +7,12 @@ int main(){
 	scanf("%d",&n);
 	int p[n] , at[n] , bt[n] , ct[n] , tat[n] , wt[n] , rt[n] , gt[10] , flag[n] , rq[n] , r[n] , en[n];
 	for(i = 0; i < n; i++ )
-    {
+    	{
         p[i] = i+1;
-		printf("Enter Arrival time , Burst time  = ");
+	printf("Enter Arrival time , Burst time  = ");
         scanf("%d %d", &at[i], &bt[i]);
         flag[i] = 0;en[i] = 0;
-	} 
+	} //Creating table of processes
 	printf("\n    Process |\tArrival |  Burst Time \n");
 	for(i = 0 ; i < n ; i++)
 		printf("\n\tP[%d]\t  %d\t\t%d\n",p[i],at[i],bt[i]);
@@ -30,10 +30,10 @@ int main(){
 				p[j] = temp;	
 			}
 		}
-	}
+	}//Sorting according to arrival time
 	for(i = 0 ; i < n ; i++){
 		 r[i] = bt[i];
-	}
+	}//storing burst time in another array
 	printf("\n    Process |\tArrival |  Burst Time \n");
 	for(i = 0 ; i < n ; i++)
 		printf("\n\tP[%d]\t  %d\t\t%d\n",p[i],at[i],bt[i]);
